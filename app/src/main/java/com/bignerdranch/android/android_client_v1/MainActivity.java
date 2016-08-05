@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.main_tab_item_setting };
 
     // Tab选项卡的文字
-    private String mTextviewArray[] = { "主页", "生活",  "保单", "我的" };
+    private String mTextViewArray[] = { "主页", "生活",  "保单", "我的" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i < count; i++) {
             // 为每一个Tab按钮设置图标、文字和内容
-            TabSpec tabSpec = mTabHost.newTabSpec(mTextviewArray[i])
+            TabSpec tabSpec = mTabHost.newTabSpec(mTextViewArray[i])
                     .setIndicator(getTabItemView(i));
             // 将Tab按钮添加进Tab选项卡中
             mTabHost.addTab(tabSpec, fragmentArray[i], null);
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setImageResource(mImageViewArray[index]);
 
         TextView textView = (TextView) view.findViewById(R.id.textview);
-        textView.setText(mTextviewArray[index]);
+        textView.setText(mTextViewArray[index]);
 
         return view;
     }
